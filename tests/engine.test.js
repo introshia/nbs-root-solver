@@ -9,9 +9,9 @@ describe('Numerical Engine Logic', () => {
 
   test('Computes exact symbolic derivatives for Newton Method', () => {
     const expr = 'x^3 - 2*x + 5';
-    // f'(x) = 3x^2 - 2
+
     const dfNode = math.derivative(expr, 'x').compile();
-    
+
     expect(dfNode.evaluate({ x: 0 })).toBe(-2);
     expect(dfNode.evaluate({ x: 2 })).toBe(10);
   });

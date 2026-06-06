@@ -1,6 +1,4 @@
-/* ===========================
-   CSS VARIABLES & RESET
-=========================== */
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -16,11 +14,11 @@
   --text-3: #4a7080;
 
   --accent: #22d3ee;
-  /* cyan — Newton */
+
   --accent-2: #34d399;
-  /* green — Bisection */
+
   --accent-3: #fbbf24;
-  /* amber — Secant */
+
   --accent-glow: rgba(34, 211, 238, 0.15);
   --accent-border: rgba(34, 211, 238, 0.25);
   --accent-text-dim: rgba(34, 211, 238, 0.6);
@@ -76,18 +74,12 @@ body {
   overflow: hidden;
 }
 
-/* ===========================
-   LAYOUT
-=========================== */
 body {
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
 
-/* ===========================
-   SIDEBAR
-=========================== */
 .sidebar {
   width: 240px;
   min-width: 240px;
@@ -245,9 +237,6 @@ body {
   line-height: 1.8;
 }
 
-/* ===========================
-   MAIN
-=========================== */
 .main {
   flex: 1;
   display: flex;
@@ -258,7 +247,6 @@ body {
   gap: 16px;
 }
 
-/* TOP BAR */
 .topbar {
   display: flex;
   align-items: center;
@@ -290,7 +278,6 @@ body {
   color: var(--text-2);
 }
 
-/* PANELS */
 .panels {
   display: grid;
   grid-template-columns: 360px 1fr;
@@ -333,7 +320,6 @@ body {
   border-radius: 4px;
 }
 
-/* STEPS INDICATOR */
 .steps-indicator {
   display: flex;
   align-items: center;
@@ -414,7 +400,6 @@ body.method-secant .step.active .step-num {
   box-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
 }
 
-/* Input validation */
 .input-group input.error {
   border-color: var(--danger);
   background: rgba(248, 113, 113, 0.06);
@@ -425,7 +410,6 @@ body.method-secant .step.active .step-num {
   border-color: var(--success);
 }
 
-/* FUNCTION PANEL */
 .panel-function {
   overflow-y: auto;
 }
@@ -443,7 +427,6 @@ body.method-secant .step.active .step-num {
   border-radius: 4px;
 }
 
-/* INPUTS */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -511,7 +494,6 @@ body.method-secant .step.active .step-num {
   display: none;
 }
 
-/* RESULT BOX */
 .result-box {
   margin: 12px 20px 0;
   background: var(--bg-3);
@@ -555,7 +537,6 @@ body.method-secant .step.active .step-num {
   word-break: break-all;
 }
 
-/* PANEL FOOTER */
 .panel-footer {
   display: flex;
   gap: 10px;
@@ -628,7 +609,6 @@ body.method-secant .step.active .step-num {
   display: none;
 }
 
-/* RIGHT COLUMN */
 .right-col {
   display: flex;
   flex-direction: column;
@@ -637,7 +617,6 @@ body.method-secant .step.active .step-num {
   min-height: 0;
 }
 
-/* GRAPH PANEL */
 .panel-graph {
   flex: 1;
   min-height: 0;
@@ -724,7 +703,6 @@ body.method-secant .step.active .step-num {
   display: none;
 }
 
-/* TABLE PANEL */
 .panel-table {
   max-height: 260px;
   min-height: 160px;
@@ -806,7 +784,6 @@ tbody td.highlight {
   font-family: var(--font-body);
 }
 
-/* Method color accents on active solve */
 body.method-bisection .btn-solve {
   background: linear-gradient(135deg, #34d399, #059669);
   box-shadow: 0 4px 16px rgba(52, 211, 153, 0.3);
@@ -845,7 +822,6 @@ body.method-secant .result-value {
   color: var(--accent-3);
 }
 
-/* Solved animation */
 @keyframes pulse-result {
   0% {
     opacity: 0;
@@ -862,7 +838,6 @@ body.method-secant .result-value {
   animation: pulse-result 0.35s ease forwards;
 }
 
-/* Loading spinner */
 .btn-solve.loading {
   pointer-events: none;
   opacity: 0.75;
@@ -887,7 +862,6 @@ body.method-secant .result-value {
   }
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .panels {
     grid-template-columns: 1fr;
